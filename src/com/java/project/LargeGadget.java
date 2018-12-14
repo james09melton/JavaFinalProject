@@ -1,5 +1,5 @@
 package com.java.project;
 
-public class LargeGadget implements GadgetInterface{
+public abstract class LargeGadget extends AbstractGadget{
 
 }
