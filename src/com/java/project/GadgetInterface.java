@@ -1,9 +1,13 @@
 package com.java.project;
 
 public interface GadgetInterface {
-	public enum Color {UNPAINTED, PAINTED, BRONZE, SILVER, GOLD};
-	public GadgetInterface getAbstractWidget();
-	public GadgetInterface.Color getColor();
-	public void paint(GadgetInterface.Color color);
+	public Widget getWidget();
+	public SurfaceColor getColor();
 	public float getPrice();
+	public String getPowerSource();
+	public int getSwitches();
+	public int getButtons();
+	public int getLights();
+	
+
 }

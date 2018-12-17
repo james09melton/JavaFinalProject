@@ -1,36 +1,27 @@
 package com.java.project;
 
-public abstract class AbstractGadget implements GadgetInterface{
-	private GadgetInterface gadget;
-	private GadgetInterface.Color color;
+public abstract class AbstractGadget implements GadgetInterface {
+	
+	protected GadgetInterface iGadget;
+	protected Widget iWidget;
+	private SurfaceColor color;
 	
 	public AbstractGadget(GadgetInterface gadget) {
-		this(gadget, GadgetInterface.Color.UNPAINTED);
+		this(gadget, SurfaceColor.PLAIN);
+		
 	}
 	
-	public AbstractGadget(GadgetInterface gadget, GadgetInterface.Color color) {
-		this.gadget = gadget;
+	public  AbstractGadget(GadgetInterface gadget, SurfaceColor color) {
+		this.iGadget = gadget;
 		this.color = color;
 	}
-
+	
 	public GadgetInterface getGadget() {
-		return gadget;
-	}
-
-	public GadgetInterface.Color getColor(){
-		return color;
-	}
-	
-	public void paint(GadgetInterface.Color color) {
-		this.color = color;
-	}
-
-	public float getPrice() {
-		return 900.00f;
+		return iGadget;
 	}
 	
 	public String toString() {
-		return getClass().getSimpleName()+" ("+gadget+", "+color+", price = "+getPrice()+")";
-	}
+		return getClass().getSimpleName()+" ("+iGadget+", "+color+", price = "+getPrice()+")";
 }
-
+	
+}
