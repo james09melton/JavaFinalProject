@@ -21,7 +21,8 @@ public class Receipt {
 		System.out.println();
 		System.out.println();
 		System.out.println("Wag Corporation");
-		System.out.println("********************");
+		System.out.println("Thank you for your order!");
+		System.out.println("*************************************");
 		System.out.println();
 		System.out.println("Gadget");
 		printGadgets();
@@ -29,8 +30,14 @@ public class Receipt {
 		printWidgets();
 		System.out.println();
 		printAccessories();
-		System.out.println("********************");
+		System.out.println("*************************************");
 		System.out.println(String.format("%-20s $%s", "Total", priceTotal));
+		System.out.println();
+		System.out.println("*************************************");
+		System.out.println("Take survey for");
+		System.out.println("Free Large Widget or");
+		System.out.println("15% discount on next order!");
+		System.out.println("Survey code: GFYR-SINR-IKXR");
 	}
 
 	private void getWidgetList() {
