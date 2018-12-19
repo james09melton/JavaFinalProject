@@ -1,8 +1,9 @@
 package com.java.project;
 
-public abstract class SmallWidget extends AbstractWidget {
+public class SmallWidget extends AbstractWidget {
 	public SmallWidget(SurfaceColor color) {
 		super(color);
+		this.serialNumber = SerialNumbers.getInstance().getNextSerial(SerialNumbers.productTypes.SmallWidget);
 	}
 	
 	public String getGears() {

@@ -2,26 +2,27 @@ package com.java.project;
 
 public abstract class AbstractGadget implements GadgetInterface {
 	
-	protected GadgetInterface iGadget;
-	protected Widget iWidget;
 	private SurfaceColor color;
+	protected String serialNumber;
 	
-	public AbstractGadget(GadgetInterface gadget) {
-		this(gadget, SurfaceColor.PLAIN);
-		
-	}
+	public AbstractGadget() { 
+		this(SurfaceColor.PLAIN);
+		}
 	
-	public  AbstractGadget(GadgetInterface gadget, SurfaceColor color) {
-		this.iGadget = gadget;
+	public  AbstractGadget( SurfaceColor color) {
 		this.color = color;
 	}
 	
-	public GadgetInterface getGadget() {
-		return iGadget;
+	public SurfaceColor getColor() {
+		return color;
+	}
+	
+	public String getSerialNumber() {
+		return serialNumber;
 	}
 	
 	public String toString() {
-		return getClass().getSimpleName()+" ("+iGadget+", "+color+", price = "+getPrice()+")";
-}
+		return getClass().getSimpleName() + "was added to the order ";
+	}
 	
 }
